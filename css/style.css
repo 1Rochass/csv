@@ -72,6 +72,7 @@ body {
 .content {
     padding: 1rem 0 0 0;
 }
+    /* product-category */
     .product-category {
     	min-width: 100%;
     	float: left;
@@ -80,6 +81,25 @@ body {
         display: table;
         margin: 0 0 1rem 0;
     }
+    /* product-category-links */
+    .product-category-links {
+        min-width: 100%;
+        float: left;
+    }
+    .product-category-links p {
+        margin: 1rem 0 1rem 0;
+    }
+    .product-category-links input {
+        /*display: table;*/
+        /*margin: 0 0 1rem 0;*/
+    }
+    .product-category-links input[type=radio] {
+       margin: 0 0 0 -1.25rem;
+    }
+    .product-category-links input[type=submit] {
+       margin: 1rem 0 1rem 0;
+    }
+    
 
 
 	

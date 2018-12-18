@@ -14,7 +14,7 @@
 		<div class="product-category col-12">
 
 			<div class="alert alert-dark">
-				Parse product links from category page
+				Parse product category page
 			</div>
 
 			<!-- Form product-category -->
@@ -30,6 +30,33 @@
 			<?php  
 				if (isset($_GET['productCategoryResponse'])) {
 					echo "<div class='alert alert-dark'>" . $_GET['productCategoryResponse'] . "</div>";
+				}
+			?>
+			
+
+		</div>
+		<!-- Product-category-links -->
+		<div class="product-category-links col-12">
+
+			<div class="alert alert-info">
+				Parse product links from category page
+			</div>
+
+			<!-- Form product-category-links -->
+			<form method="POST" action="phpQuery_parse_links.php" enctype="multipart/form-data">
+				<label for="folder-name">Folder name</label>
+				<input type="text" name="folderName" id="folder-name" value="product_categories">
+
+				<p>File for parsing links</p>
+				<?php require_once "show_files.php"; ?> <!-- Show files from folder -->
+
+				<input type="submit" name="productCategoryFileSubmit" value="Parse" id="product-category-file-submit" class="btn">
+			</form>
+
+			
+			<?php  
+				if (isset($_GET['productCategoryFile'])) {
+					echo "<div class='alert alert-info'>" . $_GET['productCategoryFile'] . "</div>";
 				}
 			?>
 			
