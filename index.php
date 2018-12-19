@@ -50,6 +50,8 @@
 				<p>File for parsing links</p>
 				<?php require_once "show_files.php"; ?> <!-- Show files from folder -->
 
+				
+
 				<input type="submit" name="productCategoryFileSubmit" value="Parse" id="product-category-file-submit" class="btn">
 			</form>
 

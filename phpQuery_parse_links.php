@@ -1,20 +1,40 @@
 <?php 
-class PQParse {
+
+require_once "phpQuery.php";
+
+class PQ {
 	
+	public $fileName; // File name
+	public $folderName; // Folder name
+
+	public function __construct() {
+		
+	}
+
+	// Check submit
 	public function checkSubmit() {
 		if (isset( $_POST['productCategoryFileSubmit']) ) {
-			$fileName = $_POST["productCategoryFile"];
-			$folderName = $_POST['folderName'];
+			$this->fileName = $_POST["productCategoryFile"]; // File name
+			$this->folderName = $_POST['folderName']; // Folder name
 			
 
-			echo "<script>";
-			echo "window.location.href = 'http://csv/index.php?productCategoryFile=" . $folderName . "/" . $fileName . "'";
-			echo "</script>";
 		}
 	}	
+
+	// PQ parse
+	public function pQParse() {
+
+	}
+
+
 }
 
-$PhpQueryParse = new PQParse();
-$PhpQueryParse->checkSubmit();
+$PhpQuery = new PQ();
+$PhpQuery->checkSubmit();
 
  ?>
+
+
+<!-- echo "<script>";
+echo "window.location.href = 'http://csv/index.php?productCategoryFile=" . $folderName . "/" . $fileName . "'";
+echo "</script>"; -->
